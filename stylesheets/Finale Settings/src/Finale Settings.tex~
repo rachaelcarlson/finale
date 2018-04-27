@@ -1,0 +1,467 @@
+% !TEX TS-program = latex
+% !TEX encoding = UTF-8
+
+% This is a simple template for a XeLaTeX document using the "article" class,
+% with the fontspec package to easily select fonts.
+
+\documentclass[10pt,twoside]{article} % use larger type; default would be 10pt
+
+\usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
+\defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
+\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
+\usepackage{xltxtra} % Extra customizations for XeLaTeX
+
+
+% \usepackage{sectsty}
+% \allsectionsfont{\sffamily}
+
+\setmainfont[Numbers=OldStyle]{Latin Modern Roman} % set the main body font (\textrm), assumes Charis SIL is installed
+\setsansfont[Numbers=OldStyle]{Myriad Pro}
+% \setmonofont{Deja Vu Mono}
+\usepackage{etoolbox}
+\AtBeginEnvironment{tabular}{\setmainfont[Numbers={Monospaced}]{Latin Modern Roman}}
+
+
+% other LaTeX packages.....
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper} % or letterpaper (US) or a5paper or....
+%\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=red,
+    urlcolor=black
+}
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{{\footnotesize\textsf{Rachael Carlson}}}
+\lhead{{\footnotesize\textsf{Finale Settings}}}
+\rfoot{{\footnotesize\textsf{Page \thepage}}}
+\lfoot{{\footnotesize\textsf{\today}}}
+
+\title{\textsf{Finale Settings}}
+\author{\textsf{Rachael Carlson}}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+\section{Document Settings}
+
+\subsection{TAB Clef}
+Edit default TAB clef in Clef Designer (nudge `A' and 	`B' down)\\
+Font: TeXGyreSchola, Bold, 10pt
+\subsection{Line Weights Used by Henle Verlag}
+Barlines: 5 EVPU\\
+Ledger Lines: 4.6 EVPU\\
+Left Half Ledger Line Length: 7 EVPU\\
+Right Half Ledger Line Length: 7 EVPU\\
+Stems: 2.2 EVPU\\
+Crescendos: 4.2 EVPU
+\subsection{Ties}
+\subsubsection{Placement: Over/Inner}
+\begin{tabular}{l l l}
+Horizontal: & Start: $-1$pt & End: 1\\
+Vertical: & Start: 3 & End: 3\\
+\end{tabular}
+\subsubsection{Placement: Under/Inner}
+\begin{tabular}{l l l}
+Horizontal: & Start: 9.5 & End: $-9.5$\\
+Vertical: & Start $-3$ & End: $-3$
+\end{tabular}
+\section{Tablature Slides}
+\subsection{Smart Shape Tool}
+Smart Shape Placement\\
+Tab Slide\\
+Same V, Lines, Pitch Increasing\\
+\begin{tabular}{l l l l}
+Start Point: & H: 1.5pt & End Point: & H: $-1.5$\\
+& V: 4 & & V: $-5.5$\\
+\end{tabular}
+\section{Page Layout}
+\subsection{Margins}
+Left, Right: 54pt\\
+Top, Bottom: 36pt
+\section{Text}
+\emph{Note: a bug in Finale 25 on Windows 10 makes it so that you have to type in the name of the font exactly in order for the font to appear on screen. To embed the font for print you have to Print to PDF. To do so, in the print dialog, choose the Microsoft Print to PDF printer.}
+\subsection{Title}
+Font: Avenir Next Heavy, 28pt
+\subsubsection{Frame Attributes}
+Inserted preset text box (editable through score manager), page 1 only\\
+Horizontal: Center, 0pt\\
+Vertical: Top (Header), 0\\
+Position From: Page Margin\\
+Position from Edge of Frame: \textbf{checked}
+
+\subsection{Subtitle}
+\label{sec:subtitle}
+
+Font: Avenir Next, Regular, 8pt
+
+\subsubsection{Frame Attributes}
+\label{sec:frame-attributes}
+
+Inserted preset text box (editable through Score Manager), page 1 only\\
+Centered, Top, Page Margin; H: 0, V: $-32$pt\\
+Position from edge of frame: \textbf{checked}
+
+\subsection{Tuning}
+\label{sec:tuning}
+
+Font: Pitches, TeXGyreSchola, Regular, 10pt\\
+\indent Octave designations: TeXGyreSchola, Regular, 6pt\\
+\indent Baseline shift: -1\\
+Accidentals: TeXGyreSchola, Regular, 8pt\\
+\indent Superscript: 2
+
+\subsubsection{Frame Attributes}
+\label{sec:frame-attributes-1}
+
+Text box, page 1 only\\
+Horizontal: Left, 1\\
+Vertical: Top (Header), -36\\
+Position from edge of frame: \textbf{checked}
+
+\subsection{Composer}
+\label{sec:composer}
+
+Font: TeXGyreSchola, Regular, 10pt\\
+
+\subsubsection{Frame Attributes}
+\label{sec:frame-attributes-2}
+
+Inserted preset text box (editable through Score Manager), page 1 only\\
+Horizontal: Right; -1pt\\
+Vertical: Top (Header), -36 (align with tuning); Arranger -49\\
+Position from: Page Margin\\
+Position from edge of frame: \textbf{checked}\\
+
+\subsection{Copyright}
+\label{sec:copyright}
+
+Font: TGS, Regular, 8pt (This is a modified version of TeXGyreSchola with Old Style numerals)
+
+\subsubsection{Frame Attributes}
+\label{sec:frame-attributes-3}
+
+Inserted preset text box (editable through Score Manager), page 1 only\\
+Horizontal: Centered, 0\\
+Vertical: Bottom (Footer), -2.25\\
+Position from: Page Margin\\
+Position from edge of frame: \textbf{checked}\\
+Justification: Center
+
+\subsection{Page Number}
+\label{sec:page-number}
+
+Font: TGS, Regular, 8pt
+
+\subsubsection{Frame Attributes}
+\label{sec:frame-attributes-4}
+
+Inserted preset text boxes: [Title] [File Date] [Page Number]/[Total Pages]\\
+Attach to: All Pages\\
+Horizontal: Right, 0\\
+Vertical: Bottom (Footer), -2.25\\
+Position From: Page Margin\\
+Position from edge of frame: \textbf{checked}
+
+\subsection{Timecodes}
+\label{sec:timecodes}
+
+Font: Avenir Next, Regular, 8pt
+
+\subsubsection{Frame Attributes}
+\label{sec:frame-attributes-5}
+
+Text box, Measure attached (standard notation)\\
+H: 0\\
+V: 48\\
+Position from edge of frame: \textbf{checked}
+
+\section{Text Expressions}
+\label{sec:text-expressions}
+
+\subsection{Tempo}
+\label{sec:tempo}
+
+Justification: Left\\
+Horizontal Alignment: Start of Time Signature, 0\\
+Vertical Alignment: Staff Reference Line, 36
+
+\subsection{Time Signatures}
+\label{sec:time-signatures}
+
+Font: Maestro, bold, 44pt\\
+Justification: Left\\
+Horizontal Alignment: Start of Time Signature, 0\\
+Vertical Alignment: Staff Reference Line, -22.75
+
+\subsection{Movements}
+\label{sec:movements}
+
+Font: TeXGyreSchola, Italic, 9pt\\
+Edit Measure Number Regions\\
+One Standard notation staff: Left, Left; H: 1.5, V: -66\\
+Grand staff: V: ~-142\\
+Show on: Top Staff, \textbf{checked}; Exclude Other Staves, \textbf{checked}; Bottom Staff, \textbf{unchecked}
+
+\section{Special Tools}
+\label{sec:special-tools}
+
+\subsection{Beam Angle}
+\label{sec:beam-angle}
+
+Eighth note stems: -12\\
+Sixteenth note stems: -12\\
+Beamed eight notes: -8
+
+\subsection{Stem Length}
+\label{sec:stem-length}
+
+Quarter note stems: -12pt
+
+\section{Resize Tool}
+\label{sec:resize-tool}
+
+\subsection{Resize System}
+\label{sec:resize-system}
+
+\emph{Note: click on staff to ensure that you are adjusting the whole staff and not a note.}\\
+
+\noindent Standard Notation: 85\%\\
+Tablature: 90\%
+
+\section{Fingerings}
+\label{sec:fingerings}
+
+\subsection{Left-Hand Fingers (Above Staff)}
+\label{sec:left-hand-fingers}
+
+% Updated 04/15/2018
+Font: TeXGyreSchola, 8pt, \emph{courtesy: 7pt}\\
+Enclosure Shape: Circle\\
+Line Thickness: 0.44922\\
+Height: 10; \emph{courtesy: 9.75}\\
+Width: 10; \emph{courtesy: 9.75}\\
+Center H: 0\\
+V: -0.25\\
+Match Height and Width\\
+Fixed enclosure size: \textbf{checked}\\
+Justification: Center\\
+Horizontal: Stem, 2.75; \emph{courtesy: After Clef/Key/Time/Repeat (2.75)}\\
+Vertical: Staff Reference Line;\\
+First: 12.75pt; Second: 23.75pt; Third: 34.75; Fourth: 45.75
+
+\subsection{Left-Hand Duration Lines}
+\label{sec:left-hand-duration}
+
+When terminated in the same system as its inception, use the \emph{Bracket Tool}.\\
+When terminated in a different system than its inception, use the \emph{Line Tool} and make it horizontal.
+
+\subsubsection{Elevated Duration Line}
+\label{sec:elev-durat-line}
+
+Line Style: Solid; Horizontal, true\\
+Thickness: 0.46094\\
+End Point Style for elevating duration line one level:\\
+\begin{tabular}{l l}
+  Start: & End:\\
+  Hook, -6.5pt & Hook, -3pt\\
+\end{tabular}
+
+\noindent End Point Style for elevating duration line two levels:\\
+\begin{tabular}{l l}
+  Start: & End:\\
+  Hook, -17pt & Hook, -3pt\\
+\end{tabular}
+
+\subsubsection{Courtesy Parenthesis}
+\label{sec:courtesy-parenthesis}
+
+Font: TeXGyreSchola, Regular, 10pt\\
+(   ): Three spaces in between each parenthesis\\
+Justification: Center\\
+Horizontal Alignment Point: After Clef/Key/Time/Repeat: 2.75pt\\
+Vertical Alignment Point: Staff Reference Line:\\
+\indent First, 12pt; Second, 23pt; Third, 34pt; Fourth, 45pt
+
+\subsection{Left-Hand Fingerings (Below Staff)}
+\label{sec:left-hand-fingerings}
+
+\subsubsection{Fourth String}
+\label{sec:fourth-string}
+
+Justification: Center\\
+Horizontal Alignment: Stem, 2.75pt\\
+Vertical Alignment: Staff Reference Line, -17.5pt (quarter), -16.5pt (eighth)
+
+\subsubsection{Fifth String}
+\label{sec:fifth-string}
+
+Justification: Center\\
+Horizontal Alignment: Stem, 2.75pt\\
+Vertical Alignment: Staff Reference Line, -26.5pt (quarter), -25.5pt (eighth)
+
+\subsubsection{Sixth String}
+\label{sec:sixth-string}
+
+Justification: Center\\
+Horizontal Alignment: 2.75pt\\
+Vertical Alignment: Below Staff Baseline or Entry, -35 (quarter), -34 (eighth)\\
+
+\subsubsection{Additional Offsets}
+\label{sec:additional-offsets}
+
+Additional Entry Offset:\\
+\indent First, -13.75pt; Second, -24.75pt; Third, -35.75pt; Fourth, -46.75pt
+
+\subsection{Parentheses}
+\label{sec:parentheses}
+
+\emph{Note: this is for surrounding a tablature notehead with a parenthesis. This is used when a finger of the left hand is placed on a fret but the right hand does not play the string.}
+
+Font: Avenir Next, Regular, 10pt\\
+(   )-three spaces between for single-digit tablature, four spaces for double-digit tablature\\
+Justification: Center\\
+Horizontal: Stem, 3pt\\
+Vertical: Staff Reference Line\\
+\indent First, -2.5pt; Second, -11.5pt; Third, -20.5pt; Fourth, -29.5pt; Fifth, -38.5pt; Sixth, -47.5pt
+
+\subsection{Right-Hand Fingerings}
+\label{sec:right-hand-fing}
+
+Font: TeXGyreSchola, Regular, 8pt\\
+
+\subsubsection{Positioning: I, M, A}
+\label{sec:positioning:-i-m}
+
+Justification: Center\\
+Horizontal Alignment: Stem, -5; two-digit numbers -7\\
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{l l r}
+    String & Reference & Alignment\\\hline
+    First & Staff Reference Line & 2.25\\
+    Second & Staff Reference Line & -7.25\\
+    Third & Staff Reference Line & -16.5\\
+    Fourth & Staff Reference Line & -25.25\\
+\end{tabular}
+\caption{Vertical Alignment of i, m, a}
+\end{table}
+
+\subsubsection{Positioning: P}
+\label{sec:positioning:-p}
+
+Justification: Center\\
+Horizontal Alignment: Stem, -3.75pt\\
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{l l}
+    String & Alignment\\\hline
+    First & Staff Reference Line, -6.5\\
+    Second & Staff Reference Line, -16.5\\
+    Third & Staff Reference Line, -24.25; strum, -33\\
+    Fourth & Staff Reference Line, -32.75; strum, -41.75\\
+    Fifth & Staff Reference Line, -41.75; strum, -50.75\\
+    Sixth & Staff Reference Line, -50.5; strum, -55.75\\
+  \end{tabular}
+  \caption{Vertical Alignment of p}
+  \label{tab:p}
+\end{table}
+
+\subsection{Muted Notes}
+\label{sec:muted-notes}
+
+Enclosure Shape: Circle\\
+Line Thickness: 0.08984\\
+Height: 8.5\\
+Width: 8.5\\
+Center H: 0\\
+V: 0.25\\
+Match Height and Width\\
+Fixed enclosure size: \textbf{checked}
+
+\section{Staff Attributes}
+\label{sec:staff-attributes}
+
+Notehead font: Avenir Next Medium, 12pt\\
+
+\subsection{Stems}
+\label{sec:stems}
+
+Always down\\
+Horizontal Stem Offsets: 0, 0\\
+Use vertical offset for notehead end of stems: \textbf{checked}\\
+Offset from noteheads: Up, 6.25pt, Down, -6.25pt\\
+Use Vertical offset for beam end of stems (offset from staff) \textbf{unchecked}\\
+
+
+\section{Harmonics}
+\label{sec:harmonics}
+
+Enter the number for the harmonic node\\
+Special Tools > Note Shape Tool\\
+
+\subsection{Notehead Settings}
+\label{sec:notehead-settings}
+
+\subsubsection{Positioning}
+\label{sec:positioning}
+
+Horizontal: 0\\
+Vertical: 1\\
+Allow vertical positioning: \textbf{checked}
+
+\subsubsection{Font}
+\label{sec:font}
+
+Use default notehead font \textbf{unchecked}\\
+Zeal 9 plain
+
+\subsubsection{Surrounding}
+\label{sec:surrounding}
+
+`<' and `>' are separate expressions\\
+Font: Zeal 9 plain\\
+
+<:\\
+\indent Justification: Center\\
+\indent Horizontal Alignment Point: Stem\\
+\indent Additional Horizontal Offset: -2.75\\
+
+>:\\
+\indent Justification: Center\\
+\indent Horizontal Alignment Point: Stem\\
+\indent Additional Horizontal Offset: 9\\
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{l l}
+    String & Alignment\\\hline
+    First & -3pt\\
+    Second & -12\\
+    Third & -21\\
+    Fourth & -30\\
+    Fifth & -39\\
+    Sixth & -48\\
+  \end{tabular}
+  \caption{Vertical Alignment of < and >}
+\end{table}
+\end{document}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

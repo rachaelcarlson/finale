@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.4.26)  28 APR 2018 10:03
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.4.26)  28 APR 2018 10:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -908,35 +908,81 @@ File: t3enc.def 2001/12/31 T3 encoding
 . Serif/BI/OT:script=latn;language=DFLT;+onum;+smcp;mapping=tex-text;"
 .................................................
 LaTeX Info: Redefining \rmfamily on input line 87.
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
-\g__fontspec_family_NimbusSansL_int=\count164
+\g__fontspec_family_TeXGyreHeros_int=\count164
 .................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'NimbusSansL(0)' created for font 'Nimbus Sans L' with options
+. Font family 'TeXGyreHeros(0)' created for font 'TeX Gyre Heros' with options
 . [Mapping=tex-text,Ligatures=TeX].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
-. - 'normal' (m/n) with NFSS spec.: <->"Nimbus Sans L/OT:mapping=tex-text;"
-. - 'small caps'  (m/sc) with NFSS spec.: 
-. - 'bold' (bx/n) with NFSS spec.: <->"Nimbus Sans L/B/OT:mapping=tex-text;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: 
-. - 'italic' (m/it) with NFSS spec.: <->"Nimbus Sans L/I/OT:mapping=tex-text;"
-. - 'italic small caps'  (m/itsc) with NFSS spec.: 
-. - 'bold italic' (bx/it) with NFSS spec.: <->"Nimbus Sans
-. L/BI/OT:mapping=tex-text;"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+. - 'normal' (m/n) with NFSS spec.: <->"TeX Gyre
+. Heros/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: <->"TeX Gyre
+. Heros/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
+. - 'bold' (bx/n) with NFSS spec.: <->"TeX Gyre
+. Heros/B/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: <->"TeX Gyre
+. Heros/B/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
+. - 'italic' (m/it) with NFSS spec.: <->"TeX Gyre
+. Heros/I/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: <->"TeX Gyre
+. Heros/I/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
+. - 'bold italic' (bx/it) with NFSS spec.: <->"TeX Gyre
+. Heros/BI/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"TeX Gyre
+. Heros/BI/OT:script=latn;language=DFLT;+smcp;mapping=tex-text;"
 .................................................
 LaTeX Info: Redefining \sffamily on input line 88.
+.................................................
+. fontspec info: "set-scale"
+. 
+. Libertinus Mono scale = 0.8666658446438533.
+.................................................
+\g__fontspec_family_LibertinusMono_int=\count165
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "Libertinus Mono/BI" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "Libertinus Mono/B" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "no-font-shape"
+. 
+. Could not resolve font "Libertinus Mono/I" (it probably doesn't exist).
+.................................................
+.................................................
+. fontspec info: "set-scale"
+. 
+. Libertinus Mono scale = 0.8666658446438533.
+.................................................
+.................................................
+. fontspec info: "defining-font"
+. 
+. Font family 'LibertinusMono(0)' created for font 'Libertinus Mono' with
+. options
+. [Mapping=tex-text,WordSpace={1,0,0},PunctuationSpace=WordSpace,Scale=MatchLow
+ercase].
+.  
+.  This font family consists of the following NFSS series/shapes:
+.  
+. - 'normal' (m/n) with NFSS spec.: <->s*[0.8666658446438533]"Libertinus
+. Mono/OT:script=latn;language=DFLT;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: 
+. and font adjustment code:
+. \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font =0\fontdimen 3\font
+. \fontdimen 4\font =0\fontdimen 4\font \fontdimen 7\font =0\fontdimen 2\font 
+.................................................
+LaTeX Info: Redefining \ttfamily on input line 89.
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count165
+\etb@tempcnta=\count166
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
@@ -1026,10 +1072,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
 (Font)                  OT1/cmr/bx/n --> TU/LibertinusSerif(0)/bx/n on input li
 ne 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/NimbusSansL(0)/m/n on input line 11
-3.
+(Font)                  OT1/cmss/m/n --> TU/TeXGyreHeros(0)/m/n on input line 1
+13.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 113.
+(Font)                  OT1/cmtt/m/n --> TU/LibertinusMono(0)/m/n on input line
+ 113.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/LibertinusSerif(0)/m/n --> TU/LibertinusSerif(0)/bx/
 n on input line 113.
@@ -1037,10 +1084,11 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> TU/LibertinusSerif(0)/bx/it on input 
 line 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/NimbusSansL(0)/bx/n on input line 
-113.
+(Font)                  OT1/cmss/bx/n --> TU/TeXGyreHeros(0)/bx/n on input line
+ 113.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/bx/n on input line 113.
+(Font)                  OT1/cmtt/m/n --> TU/LibertinusMono(0)/bx/n on input lin
+e 113.
 \AtBeginShipoutBox=\box78
 Package hyperref Info: Link coloring ON on input line 113.
 
@@ -1050,7 +1098,7 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count166
+\c@section@level=\count167
 )
 LaTeX Info: Redefining \ref on input line 113.
 LaTeX Info: Redefining \pageref on input line 113.
@@ -1099,90 +1147,49 @@ LaTeX Info: Redefining \selectfont on input line 113.
 
 \langwohyphens=\language83
 .................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
-.................................................
 . fontspec info: "defining-font"
 . 
-. Font family 'NimbusSansL(1)' created for font 'Nimbus Sans L' with options
+. Font family 'TeXGyreHeros(1)' created for font 'TeX Gyre Heros' with options
 . [Mapping=tex-text,Ligatures=TeX,LetterSpace=15].
 .  
 .  This font family consists of the following NFSS series/shapes:
 .  
-. - 'normal' (m/n) with NFSS spec.: <->"Nimbus Sans
-. L/OT:letterspace=15;mapping=tex-text;"
-. - 'small caps'  (m/sc) with NFSS spec.: 
-. - 'bold' (bx/n) with NFSS spec.: <->"Nimbus Sans
-. L/B/OT:letterspace=15;mapping=tex-text;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: 
-. - 'italic' (m/it) with NFSS spec.: <->"Nimbus Sans
-. L/I/OT:letterspace=15;mapping=tex-text;"
-. - 'italic small caps'  (m/itsc) with NFSS spec.: 
-. - 'bold italic' (bx/it) with NFSS spec.: <->"Nimbus Sans
-. L/BI/OT:letterspace=15;mapping=tex-text;"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
+. - 'normal' (m/n) with NFSS spec.: <->"TeX Gyre
+. Heros/OT:script=latn;language=DFLT;letterspace=15;mapping=tex-text;"
+. - 'small caps'  (m/sc) with NFSS spec.: <->"TeX Gyre
+. Heros/OT:script=latn;language=DFLT;letterspace=15;+smcp;mapping=tex-text;"
+. - 'bold' (bx/n) with NFSS spec.: <->"TeX Gyre
+. Heros/B/OT:script=latn;language=DFLT;letterspace=15;mapping=tex-text;"
+. - 'bold small caps'  (bx/sc) with NFSS spec.: <->"TeX Gyre
+. Heros/B/OT:script=latn;language=DFLT;letterspace=15;+smcp;mapping=tex-text;"
+. - 'italic' (m/it) with NFSS spec.: <->"TeX Gyre
+. Heros/I/OT:script=latn;language=DFLT;letterspace=15;mapping=tex-text;"
+. - 'italic small caps'  (m/itsc) with NFSS spec.: <->"TeX Gyre
+. Heros/I/OT:script=latn;language=DFLT;letterspace=15;+smcp;mapping=tex-text;"
+. - 'bold italic' (bx/it) with NFSS spec.: <->"TeX Gyre
+. Heros/BI/OT:script=latn;language=DFLT;letterspace=15;mapping=tex-text;"
+. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: <->"TeX Gyre
+. Heros/BI/OT:script=latn;language=DFLT;letterspace=15;+smcp;mapping=tex-text;"
+
 .................................................
 
-Overfull \hbox (3.48549pt too wide) in paragraph at lines 125--125
-[]\TU/NimbusSansL(1)/m/n/10.95 THE PUBLIC IS MORE FAMILIAR WITH BAD DESIGN THAN
- GOOD DESIGN. IT 
+Overfull \hbox (3.50739pt too wide) in paragraph at lines 125--125
+[]\TU/TeXGyreHeros(1)/m/n/10.95 THE PUBLIC IS MORE FAMILIAR WITH BAD DESIGN THA
+N GOOD DESIGN. IT 
  []
 
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
 
-Overfull \hbox (10.48253pt too wide) in paragraph at lines 140--140
-\TU/NimbusSansL(1)/m/n/10.95 ALL THESE ACTIVITIES, LITERALLY HUNDREDS OF IMPROV
-EMENTS WOULD 
+Overfull \hbox (10.47157pt too wide) in paragraph at lines 140--140
+\TU/TeXGyreHeros(1)/m/n/10.95 ALL THESE ACTIVITIES, LITERALLY HUNDREDS OF IMPRO
+VEMENTS WOULD 
  []
 
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
 [1
 
 
 ] [2
 
-]
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
-.................................................
-. fontspec info: "no-scripts"
-. 
-. Font "Nimbus Sans L" does not contain any OpenType `Script' information.
-.................................................
- [3]
+] [3]
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1213,6 +1220,8 @@ ext;"
 . Serif/BI/OT:script=latn;language=DFLT;letterspace=10;+onum;+smcp;mapping=tex-
 text;"
 .................................................
+LaTeX Font Info:    Font shape `TU/LibertinusMono(0)/m/n' will be
+(Font)              scaled to size 8.66669pt on input line 163.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 163.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -1353,12 +1362,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 624.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 624.
  ) 
 Here is how much of TeX's memory you used:
- 24561 strings out of 493068
- 463308 string characters out of 6137720
- 509667 words of memory out of 5000000
- 28179 multiletter control sequences out of 15000+600000
- 6608 words of font info for 81 fonts, out of 8000000 for 9000
+ 24591 strings out of 493068
+ 465067 string characters out of 6137720
+ 508994 words of memory out of 5000000
+ 28202 multiletter control sequences out of 15000+600000
+ 6624 words of font info for 83 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 51i,12n,84p,10419b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,12n,117p,10419b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Finale Settings.pdf (35 pages).

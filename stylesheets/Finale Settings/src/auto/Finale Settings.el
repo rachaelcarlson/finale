@@ -3,28 +3,37 @@
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
                      '(("tufte-book" "unicode" "hyperfootnotes=false" "xetex" "colorlinks=true" "nofonts" "nobib")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
     "tufte-book"
     "tufte-book10"
+    "booktabs"
+    "graphicx"
+    "fancyvrb"
+    "xspace"
+    "units"
     "fontspec"
     "xunicode"
     "xltxtra"
     "ifxetex"
-    "booktabs"
     "etoolbox"
     "geometry"
-    "graphicx"
-    "hyperref")
+    "makeidx")
    (TeX-add-symbols
-    '("textls" ["argument"] 1))
+    '("textls" ["argument"] 1)
+    '("measure" 3)
+    '("openepigraph" 2)
+    '("hangp" 1)
+    "hangstar"
+    "monthyear"
+    "blankpage")
    (LaTeX-add-labels
     "sec:subtitle"
     "sec:frame-attributes"
@@ -69,6 +78,8 @@
     "sec:notehead-settings"
     "sec:positioning"
     "sec:font"
-    "sec:surrounding"))
+    "sec:surrounding")
+   (LaTeX-add-index-entries
+    "license"))
  :latex)
 

@@ -3,14 +3,77 @@
 
 \documentclass[unicode,hyperfootnotes=false,xetex,colorlinks=true,nofonts,nobib]{tufte-book} % use larger type; default would be 10pt
 
+%%
+% Book metadata
+\title{Finale Settings}
+\author{Rachael Carlson}
+\publisher{rachaelcarlson.com}
+
+%%
+% For nicely typeset tabular material
+\usepackage{booktabs}
+
+%%
+% For graphics / images
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+%%
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments. We use a slightly smaller font
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+%%
+% Prints argument within hanging parentheses (i.e., parentheses that take
+% up no horizontal space).  Useful in tabular environments.
+\newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}}
+
+%%
+% Prints an asterisk that takes up no horizontal space.
+% Useful in tabular environments.
+\newcommand{\hangstar}{\makebox[0pt][l]{*}}
+
+%%
+% Prints a trailing space in a smart way.
+\usepackage{xspace}
+
+% Prints the month name (e.g., January) and the year (e.g., 2008)
+\newcommand{\monthyear}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or
+  December\fi\space\number\year
+}
+
+
+% Prints an epigraph and speaker in sans serif, all-caps type.
+\newcommand{\openepigraph}[2]{%
+  %\sffamily\fontsize{14}{16}\selectfont
+  \begin{fullwidth}
+  \sffamily\large
+  \begin{doublespace}
+  \noindent\allcaps{#1}\\% epigraph
+  \noindent\allcaps{#2}% author
+  \end{doublespace}
+  \end{fullwidth}
+}
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+\usepackage{units}
+
+% Typesets the font size, leading, and measure in the form of 10/12x26 pc.
+\newcommand{\measure}[3]{#1/#2$\times$\unit[#3]{pc}}
+
+%%
+% Font configurations
 \usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
 \defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
 \usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
 \usepackage{xltxtra} % Extra customizations for XeLaTeX
-
 \usepackage{ifxetex}
-\usepackage{booktabs}
-
 \ifxetex
   \newcommand{\textls}[2][5]{%
     \begingroup\addfontfeatures{LetterSpace=#1}#2\endgroup
@@ -21,68 +84,145 @@
   \renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeTextLowercase{#1}}}
   \renewcommand{\textsc}[1]{\smallcapsspacing{\textsmallcaps{#1}}}
 \fi
-
-% \usepackage{sectsty}
-% \allsectionsfont{\sffamily}
-
-\setmainfont[Numbers=OldStyle]{Libertinus Serif} % set the main body font (\textrm), assumes Charis SIL is installed
+\setmainfont[Numbers=OldStyle]{Libertinus Serif}
 \setsansfont[]{Nimbus Sans L}
 % \setmonofont{Deja Vu Mono}
 \usepackage{etoolbox}
-\AtBeginEnvironment{tabular}{\setmainfont[Numbers={Monospaced}]{Libertinus Serif}}
 
+%%
+% Use monospaced numbers within the tabular environment
+\AtBeginEnvironment{tabular}{\setmainfont[Numbers={Monospaced}]{Libertinus Serif}}
 
 % other LaTeX packages.....
 \usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
-\geometry{letterpaper} % or letterpaper (US) or a5paper or....
-%\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\geometry{letterpaper}
 
-\usepackage{graphicx} % support the \includegraphics command and options
+% \usepackage{hyperref}
+% \hypersetup{
+%     colorlinks,
+%     citecolor=black,
+%     filecolor=black,
+%     linkcolor=red,
+%     urlcolor=black
+% }
 
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks,
-    citecolor=black,
-    filecolor=black,
-    linkcolor=red,
-    urlcolor=black
-}
-
-% \usepackage{fancyhdr}
-
-% \pagestyle{fancy}
-% \fancyhf{}
-% \rhead{{\footnotesize\textsf{Rachael Carlson}}}
-% \lhead{{\footnotesize\textsf{Finale Settings}}}
-% \rfoot{{\footnotesize\textsf{Page \thepage}}}
-% \lfoot{{\footnotesize\textsf{\today}}}
-
-\title{Finale Settings}
-\author{Rachael Carlson}
-%\date{} % Activate to display a given date or no date (if empty),
-         % otherwise the current date is printed 
+% Generates the index
+\usepackage{makeidx}
+\makeindex
 
 \begin{document}
-\maketitle
-\begin{center}
-Version 1.00
-\end{center}
+\frontmatter
 
+% epigraphs
+% I love these epigraphs. I feel that they are perfect for this project as well.
+\newpage\thispagestyle{empty}
+\openepigraph{%
+The public is more familiar with bad design than good design.
+It is, in effect, conditioned to prefer bad design, 
+because that is what it lives with. 
+The new becomes threatening, the old reassuring.
+}{Paul Rand%, {\itshape Design, Form, and Chaos}
+}
+\vfill
+\openepigraph{%
+A designer knows that he has achieved perfection 
+not when there is nothing left to add, 
+but when there is nothing left to take away.
+}{Antoine de Saint-Exup\'{e}ry}
+\vfill
+\openepigraph{%
+\ldots the designer of a new system must not only be the implementor and the first 
+large-scale user; the designer should also write the first user manual\ldots 
+If I had not participated fully in all these activities, 
+literally hundreds of improvements would never have been made, 
+because I would never have thought of them or perceived 
+why they were important.
+}{Donald E. Knuth}
+
+
+% Title Page
+\maketitle
+
+
+% copyright page
+\newpage
+\begin{fullwidth}
+  ~\vfill
+  \thispagestyle{empty}
+  \setlength{\parindent}{0pt}
+  \setlength{\parskip}{\baselineskip}
+  Copyright \copyright\ \the\year\ \thanklessauthor
+
+  \par\smallcaps{Published by \thanklessauthor}
+
+  \par\smallcaps{https://www.rachaelcarlson.com}
+
+  \par Licensed under the Apache License, Version 2.0 (the
+  ``License''); you may not use this file except in compliance with
+  the License. You may obtain a copy of the License at
+  \url{http://www.apache.org/licenses/LICENSE-2.0}. Unless required by
+  applicable law or agreed to in writing, software distributed under
+  the License is distributed on an \smallcaps{``AS IS'' BASIS, WITHOUT
+    WARRANTIES OR CONDITIONS OF ANY KIND}, either express or
+  implied. See the License for the specific language governing
+  permissions and limitations under the License.\index{license}
+
+  \par\textit{Alpha Edition, \monthyear}
+\end{fullwidth}
+
+%% Contents
 \tableofcontents
+
+
+%% List of figures (we will eventually have some figures to add
+% \listoffigures
+
+
+\listoftables
+
+
+%% Dedication
+\cleardoublepage
+~\vfill
+\begin{doublespace}
+  \noindent\fontsize{18}{22}\selectfont\itshape
+  \nohyphenation
+  For John Stropes, Joshua Lane, and \\
+  Meghan Carlson, without whom I wouldn't.
+\end{doublespace}
+\vfill
+\vfill
+
+
 \clearpage
-\section{Document Settings}
- 
-\subsection{\textsc{tab} Clef}
+\chapter{Introduction}
+\newthought{The purpose} of this document is to generate consistency in the
+production of finger-style guitar scores.
+
+\mainmatter
+
+\chapter{Document Settings}
+\newthought{These are the settings} which are configurable through the
+document settings dialog.
+\section{\textsc{tab} Clef}
 Edit default TAB clef in Clef Designer (nudge `A' and 	`B' down)\\
 Font: TeXGyreSchola, Bold, 10pt
-\subsection{Line Weights Used by Henle Verlag}
-Barlines: 5 EVPU\\
-Ledger Lines: 4.6 EVPU\\
-Left Half Ledger Line Length: 7 EVPU\\
-Right Half Ledger Line Length: 7 EVPU\\
-Stems: 2.2 EVPU\\
-Crescendos: 4.2 EVPU
-\subsection{Ties}
+\section{Line Weights}
+\begin{table}
+  \begin{center}
+\begin{tabular}[h!]{l l}
+  Line & Weight\\\hline
+  Barlines & 5 EVPU\\
+  Ledger Lines & 4.6 EVPU\\
+  Left Half Ledger Line Length & 7 EVPU\\
+  Right Half Ledger Line Length & 7 EVPU\\
+  Stems & 2.2 EVPU\\
+  Crescendos & 4.2 EVPU\\
+\end{tabular}
+\end{center}
+\caption{Line Weights in EVPU}
+\end{table}
+\section{Ties}
 \paragraph{Placement: Over/Inner}
 \begin{tabular}{l l l}
 Horizontal: & Start: $-1$pt & End: 1\\
@@ -93,8 +233,8 @@ Vertical: & Start: 3 & End: 3\\
 Horizontal: & Start: 9.5 & End: $-9.5$\\
 Vertical: & Start $-3$ & End: $-3$
 \end{tabular}
-\section{Tablature Slides}
-\subsection{Smart Shape Tool}
+\chapter{Tablature Slides}
+\section{Smart Shape Tool}
 Smart Shape Placement\\
 Tab Slide\\
 Same V, Lines, Pitch Increasing\\
@@ -102,14 +242,18 @@ Same V, Lines, Pitch Increasing\\
 Start Point: & H: 1.5pt & End Point: & H: $-1.5$\\
 & V: 4 & & V: $-5.5$\\
 \end{tabular}
-\section{Page Layout}
-\subsection{Margins}
+\chapter{Page Layout}
+\section{Margins}
 Left, Right: 54pt\\
 Top, Bottom: 36pt
-\section{Text}
-\emph{Note: a bug in Finale 25 on Windows 10 makes it so that you have to type in the name of the font exactly in order for the font to appear on screen. To embed the font for print you have to Print to PDF. To do so, in the print dialog, choose the Microsoft Print to PDF printer.}
-\subsection{Title}
-Font: Avenir Next Heavy, 28pt
+\chapter{Text}
+\section{Title}
+Font: Avenir Next Heavy, 28pt\sidenote{A bug in Finale 25 on Windows
+  10 makes it so that you have to type in the name of the font exactly
+  in order for the font to appear on screen. To embed the font for
+  print you have to Print to PDF. To do so, in the print dialog,
+  choose the Microsoft Print to PDF printer.}
+
 \paragraph{Frame Attributes}
 Inserted preset text box (editable through score manager), page 1 only\\
 Horizontal: Center, 0pt\\
@@ -117,7 +261,7 @@ Vertical: Top (Header), 0\\
 Position From: Page Margin\\
 Position from Edge of Frame: \textbf{checked}
 
-\subsection{Subtitle}
+\section{Subtitle}
 \label{sec:subtitle}
 
 Font: Avenir Next, Regular, 8pt
@@ -129,7 +273,7 @@ Inserted preset text box (editable through Score Manager), page 1 only\\
 Centered, Top, Page Margin; H: 0, V: $-32$pt\\
 Position from edge of frame: \textbf{checked}
 
-\subsection{Tuning}
+\section{Tuning}
 \label{sec:tuning}
 
 Font: Pitches, TeXGyreSchola, Regular, 10pt\\
@@ -146,7 +290,7 @@ Horizontal: Left, 1\\
 Vertical: Top (Header), -36\\
 Position from edge of frame: \textbf{checked}
 
-\subsection{Composer}
+\section{Composer}
 \label{sec:composer}
 
 Font: TeXGyreSchola, Regular, 10pt\\
@@ -160,7 +304,7 @@ Vertical: Top (Header), -36 (align with tuning); Arranger -49\\
 Position from: Page Margin\\
 Position from edge of frame: \textbf{checked}\\
 
-\subsection{Copyright}
+\section{Copyright}
 \label{sec:copyright}
 
 Font: TGS, Regular, 8pt (This is a modified version of TeXGyreSchola with Old Style numerals)
@@ -175,7 +319,7 @@ Position from: Page Margin\\
 Position from edge of frame: \textbf{checked}\\
 Justification: Center
 
-\subsection{Page Number}
+\section{Page Number}
 \label{sec:page-number}
 
 Font: TGS, Regular, 8pt
@@ -190,7 +334,7 @@ Vertical: Bottom (Footer), -2.25\\
 Position From: Page Margin\\
 Position from edge of frame: \textbf{checked}
 
-\subsection{Timecodes}
+\section{Timecodes}
 \label{sec:timecodes}
 
 Font: Avenir Next, Regular, 8pt
@@ -203,17 +347,17 @@ H: 0\\
 V: 48\\
 Position from edge of frame: \textbf{checked}
 
-\section{Text Expressions}
+\chapter{Text Expressions}
 \label{sec:text-expressions}
 
-\subsection{Tempo}
+\section{Tempo}
 \label{sec:tempo}
 
 Justification: Left\\
 Horizontal Alignment: Start of Time Signature, 0\\
 Vertical Alignment: Staff Reference Line, 36
 
-\subsection{Time Signatures}
+\section{Time Signatures}
 \label{sec:time-signatures}
 
 Font: Maestro, bold, 44pt\\
@@ -221,7 +365,7 @@ Justification: Left\\
 Horizontal Alignment: Start of Time Signature, 0\\
 Vertical Alignment: Staff Reference Line, -22.75
 
-\subsection{Movements}
+\section{Movements}
 \label{sec:movements}
 
 Font: TeXGyreSchola, Italic, 9pt\\
@@ -230,36 +374,35 @@ One Standard notation staff: Left, Left; H: 1.5, V: -66\\
 Grand staff: V: ~-142\\
 Show on: Top Staff, \textbf{checked}; Exclude Other Staves, \textbf{checked}; Bottom Staff, \textbf{unchecked}
 
-\section{Special Tools}
+\chapter{Special Tools}
 \label{sec:special-tools}
 
-\subsection{Beam Angle}
+\section{Beam Angle}
 \label{sec:beam-angle}
 
 Eighth note stems: -12\\
 Sixteenth note stems: -12\\
 Beamed eight notes: -8
 
-\subsection{Stem Length}
+\section{Stem Length}
 \label{sec:stem-length}
 
 Quarter note stems: -12pt
 
-\section{Resize Tool}
+\chapter{Resize Tool}
 \label{sec:resize-tool}
 
-\subsection{Resize System}
+\section{Resize System}
 \label{sec:resize-system}
 
-\emph{Note: click on staff to ensure that you are adjusting the whole staff and not a note.}\\
+Standard Notation: 85\%\sidenote{Click on staff to ensure that you are adjusting the whole staff and not a note.}\\
 
-\noindent Standard Notation: 85\%\\
-Tablature: 90\%
+\noindent Tablature: 90\%
 
-\section{Fingerings}
+\chapter{Fingerings}
 \label{sec:fingerings}
 
-\subsection{Left-Hand Fingers (Above Staff)}
+\section{Left-Hand Fingers (Above Staff)}
 \label{sec:left-hand-fingers}
 
 % Updated 04/15/2018
@@ -277,7 +420,7 @@ Horizontal: Stem, 2.75; \emph{courtesy: After Clef/Key/Time/Repeat (2.75)}\\
 Vertical: Staff Reference Line;\\
 First: 12.75pt; Second: 23.75pt; Third: 34.75; Fourth: 45.75
 
-\subsection{Left-Hand Duration Lines}
+\section{Left-Hand Duration Lines}
 \label{sec:left-hand-duration}
 
 When terminated in the same system as its inception, use the \emph{Bracket Tool}.\\
@@ -310,7 +453,7 @@ Horizontal Alignment Point: After Clef/Key/Time/Repeat: 2.75pt\\
 Vertical Alignment Point: Staff Reference Line:\\
 \indent First, 12pt; Second, 23pt; Third, 34pt; Fourth, 45pt
 
-\subsection{Left-Hand Fingerings (Below Staff)}
+\section{Left-Hand Fingerings (Below Staff)}
 \label{sec:left-hand-fingerings}
 
 \paragraph{Fourth String}
@@ -340,7 +483,7 @@ Vertical Alignment: Below Staff Baseline or Entry, -35 (quarter), -34 (eighth)\\
 Additional Entry Offset:\\
 \indent First, -13.75pt; Second, -24.75pt; Third, -35.75pt; Fourth, -46.75pt
 
-\subsection{Parentheses}
+\section{Parentheses}
 \label{sec:parentheses}
 
 \emph{Note: this is for surrounding a tablature notehead with a parenthesis. This is used when a finger of the left hand is placed on a fret but the right hand does not play the string.}
@@ -352,7 +495,7 @@ Horizontal: Stem, 3pt\\
 Vertical: Staff Reference Line\\
 \indent First, -2.5pt; Second, -11.5pt; Third, -20.5pt; Fourth, -29.5pt; Fifth, -38.5pt; Sixth, -47.5pt
 
-\subsection{Right-Hand Fingerings}
+\section{Right-Hand Fingerings}
 \label{sec:right-hand-fing}
 
 Font: TeXGyreSchola, Regular, 8pt\\
@@ -396,7 +539,7 @@ Horizontal Alignment: Stem, -3.75pt\\
   \label{tab:p}
 \end{table}
 
-\subsection{Muted Notes}
+\section{Muted Notes}
 \label{sec:muted-notes}
 
 Enclosure Shape: Circle\\
@@ -408,12 +551,12 @@ V: 0.25\\
 Match Height and Width\\
 Fixed enclosure size: \textbf{checked}
 
-\section{Staff Attributes}
+\chapter{Staff Attributes}
 \label{sec:staff-attributes}
 
 Notehead font: Avenir Next Medium, 12pt\\
 
-\subsection{Stems}
+\section{Stems}
 \label{sec:stems}
 
 Always down\\
@@ -423,13 +566,13 @@ Offset from noteheads: Up, 6.25pt, Down, -6.25pt\\
 Use Vertical offset for beam end of stems (offset from staff) \textbf{unchecked}\\
 
 
-\section{Harmonics}
+\chapter{Harmonics}
 \label{sec:harmonics}
 
 Enter the number for the harmonic node\\
 Special Tools > Note Shape Tool\\
 
-\subsection{Notehead Settings}
+\section{Notehead Settings}
 \label{sec:notehead-settings}
 
 \paragraph{Positioning}

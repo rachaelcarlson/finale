@@ -1,56 +1,57 @@
-\contentsline {section}{\numberline {1}Document Settings}{3}{section.1}
-\contentsline {subsection}{\numberline {1.1}\textsc {tab} Clef}{3}{subsection.1.1}
-\contentsline {subsection}{\numberline {1.2}Line Weights Used by Henle Verlag}{3}{subsection.1.2}
-\contentsline {subsection}{\numberline {1.3}Ties}{3}{subsection.1.3}
-\contentsline {subsubsection}{\numberline {1.3.1}Placement: Over/Inner}{3}{subsubsection.1.3.1}
-\contentsline {subsubsection}{\numberline {1.3.2}Placement: Under/Inner}{3}{subsubsection.1.3.2}
-\contentsline {section}{\numberline {2}Tablature Slides}{3}{section.2}
-\contentsline {subsection}{\numberline {2.1}Smart Shape Tool}{3}{subsection.2.1}
-\contentsline {section}{\numberline {3}Page Layout}{3}{section.3}
-\contentsline {subsection}{\numberline {3.1}Margins}{3}{subsection.3.1}
-\contentsline {section}{\numberline {4}Text}{4}{section.4}
-\contentsline {subsection}{\numberline {4.1}Title}{4}{subsection.4.1}
-\contentsline {subsubsection}{\numberline {4.1.1}Frame Attributes}{4}{subsubsection.4.1.1}
-\contentsline {subsection}{\numberline {4.2}Subtitle}{4}{subsection.4.2}
-\contentsline {subsubsection}{\numberline {4.2.1}Frame Attributes}{4}{subsubsection.4.2.1}
-\contentsline {subsection}{\numberline {4.3}Tuning}{4}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Frame Attributes}{4}{subsubsection.4.3.1}
-\contentsline {subsection}{\numberline {4.4}Composer}{4}{subsection.4.4}
-\contentsline {subsubsection}{\numberline {4.4.1}Frame Attributes}{5}{subsubsection.4.4.1}
-\contentsline {subsection}{\numberline {4.5}Copyright}{5}{subsection.4.5}
-\contentsline {subsubsection}{\numberline {4.5.1}Frame Attributes}{5}{subsubsection.4.5.1}
-\contentsline {subsection}{\numberline {4.6}Page Number}{5}{subsection.4.6}
-\contentsline {subsubsection}{\numberline {4.6.1}Frame Attributes}{5}{subsubsection.4.6.1}
-\contentsline {subsection}{\numberline {4.7}Timecodes}{5}{subsection.4.7}
-\contentsline {subsubsection}{\numberline {4.7.1}Frame Attributes}{5}{subsubsection.4.7.1}
-\contentsline {section}{\numberline {5}Text Expressions}{6}{section.5}
-\contentsline {subsection}{\numberline {5.1}Tempo}{6}{subsection.5.1}
-\contentsline {subsection}{\numberline {5.2}Time Signatures}{6}{subsection.5.2}
-\contentsline {subsection}{\numberline {5.3}Movements}{6}{subsection.5.3}
-\contentsline {section}{\numberline {6}Special Tools}{6}{section.6}
-\contentsline {subsection}{\numberline {6.1}Beam Angle}{6}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Stem Length}{6}{subsection.6.2}
-\contentsline {section}{\numberline {7}Resize Tool}{6}{section.7}
-\contentsline {subsection}{\numberline {7.1}Resize System}{6}{subsection.7.1}
-\contentsline {section}{\numberline {8}Fingerings}{7}{section.8}
-\contentsline {subsection}{\numberline {8.1}Left-Hand Fingers (Above Staff)}{7}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Left-Hand Duration Lines}{7}{subsection.8.2}
-\contentsline {subsubsection}{\numberline {8.2.1}Elevated Duration Line}{7}{subsubsection.8.2.1}
-\contentsline {subsubsection}{\numberline {8.2.2}Courtesy Parenthesis}{7}{subsubsection.8.2.2}
-\contentsline {subsection}{\numberline {8.3}Left-Hand Fingerings (Below Staff)}{8}{subsection.8.3}
-\contentsline {subsubsection}{\numberline {8.3.1}Fourth String}{8}{subsubsection.8.3.1}
-\contentsline {subsubsection}{\numberline {8.3.2}Fifth String}{8}{subsubsection.8.3.2}
-\contentsline {subsubsection}{\numberline {8.3.3}Sixth String}{8}{subsubsection.8.3.3}
-\contentsline {subsubsection}{\numberline {8.3.4}Additional Offsets}{8}{subsubsection.8.3.4}
-\contentsline {subsection}{\numberline {8.4}Parentheses}{8}{subsection.8.4}
-\contentsline {subsection}{\numberline {8.5}Right-Hand Fingerings}{8}{subsection.8.5}
-\contentsline {subsubsection}{\numberline {8.5.1}Positioning: I, M, A}{8}{subsubsection.8.5.1}
-\contentsline {subsubsection}{\numberline {8.5.2}Positioning: P}{9}{subsubsection.8.5.2}
-\contentsline {subsection}{\numberline {8.6}Muted Notes}{9}{subsection.8.6}
-\contentsline {section}{\numberline {9}Staff Attributes}{9}{section.9}
-\contentsline {subsection}{\numberline {9.1}Stems}{9}{subsection.9.1}
-\contentsline {section}{\numberline {10}Harmonics}{10}{section.10}
-\contentsline {subsection}{\numberline {10.1}Notehead Settings}{10}{subsection.10.1}
-\contentsline {subsubsection}{\numberline {10.1.1}Positioning}{10}{subsubsection.10.1.1}
-\contentsline {subsubsection}{\numberline {10.1.2}Font}{10}{subsubsection.10.1.2}
-\contentsline {subsubsection}{\numberline {10.1.3}Surrounding}{10}{subsubsection.10.1.3}
+\contentsline {section}{Document Settings}{4}{section*.2}
+\contentsline {subsection}{\textls [10]{\textsmallcaps {tab}} Clef}{4}{subsection*.3}
+\contentsline {subsection}{Line Weights Used by Henle Verlag}{4}{subsection*.4}
+\contentsline {subsection}{Ties}{4}{subsection*.5}
+\contentsline {paragraph}{Placement: Over/Inner}{4}{paragraph*.6}
+\contentsline {paragraph}{Placement: Under/Inner}{4}{paragraph*.7}
+\contentsline {section}{Tablature Slides}{4}{section*.8}
+\contentsline {subsection}{Smart Shape Tool}{4}{subsection*.9}
+\contentsline {section}{Page Layout}{4}{section*.10}
+\contentsline {subsection}{Margins}{4}{subsection*.11}
+\contentsline {section}{Text}{4}{section*.12}
+\contentsline {subsection}{Title}{5}{subsection*.13}
+\contentsline {paragraph}{Frame Attributes}{5}{paragraph*.14}
+\contentsline {subsection}{Subtitle}{5}{subsection*.15}
+\contentsline {paragraph}{Frame Attributes}{5}{paragraph*.16}
+\contentsline {subsection}{Tuning}{5}{subsection*.17}
+\contentsline {paragraph}{Frame Attributes}{5}{paragraph*.18}
+\contentsline {subsection}{Composer}{5}{subsection*.19}
+\contentsline {paragraph}{Frame Attributes}{5}{paragraph*.20}
+\contentsline {subsection}{Copyright}{6}{subsection*.21}
+\contentsline {paragraph}{Frame Attributes}{6}{paragraph*.22}
+\contentsline {subsection}{Page Number}{6}{subsection*.23}
+\contentsline {paragraph}{Frame Attributes}{6}{paragraph*.24}
+\contentsline {subsection}{Timecodes}{6}{subsection*.25}
+\contentsline {paragraph}{Frame Attributes}{6}{paragraph*.26}
+\contentsline {section}{Text Expressions}{6}{section*.27}
+\contentsline {subsection}{Tempo}{6}{subsection*.28}
+\contentsline {subsection}{Time Signatures}{6}{subsection*.29}
+\contentsline {subsection}{Movements}{7}{subsection*.30}
+\contentsline {section}{Special Tools}{7}{section*.31}
+\contentsline {subsection}{Beam Angle}{7}{subsection*.32}
+\contentsline {subsection}{Stem Length}{7}{subsection*.33}
+\contentsline {section}{Resize Tool}{7}{section*.34}
+\contentsline {subsection}{Resize System}{7}{subsection*.35}
+\contentsline {section}{Fingerings}{7}{section*.36}
+\contentsline {subsection}{Left-Hand Fingers (Above Staff)}{7}{subsection*.37}
+\contentsline {subsection}{Left-Hand Duration Lines}{8}{subsection*.38}
+\contentsline {paragraph}{Elevated Duration Line}{8}{paragraph*.39}
+\contentsline {paragraph}{Courtesy Parenthesis}{8}{paragraph*.40}
+\contentsline {subsection}{Left-Hand Fingerings (Below Staff)}{8}{subsection*.41}
+\contentsline {paragraph}{Fourth String}{8}{paragraph*.42}
+\contentsline {paragraph}{Fifth String}{8}{paragraph*.43}
+\contentsline {paragraph}{Sixth String}{8}{paragraph*.44}
+\contentsline {paragraph}{Additional Offsets}{8}{paragraph*.45}
+\contentsline {subsection}{Parentheses}{9}{subsection*.46}
+\contentsline {subsection}{Right-Hand Fingerings}{9}{subsection*.47}
+\contentsline {paragraph}{Positioning: I, M, A}{9}{paragraph*.48}
+\contentsline {paragraph}{Positioning: P}{9}{paragraph*.49}
+\contentsline {subsection}{Muted Notes}{9}{subsection*.50}
+\contentsline {section}{Staff Attributes}{10}{section*.51}
+\contentsline {subsection}{Stems}{10}{subsection*.52}
+\contentsline {section}{Harmonics}{10}{section*.53}
+\contentsline {subsection}{Notehead Settings}{10}{subsection*.54}
+\contentsline {paragraph}{Positioning}{10}{paragraph*.55}
+\contentsline {paragraph}{Font}{10}{paragraph*.56}
+\contentsline {paragraph}{Surrounding}{10}{paragraph*.57}
+\contentsfinish 

@@ -2,26 +2,29 @@
  "Finale Settings"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("article" "10pt" "twoside")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+                     '(("tufte-book" "unicode" "hyperfootnotes=false" "xetex" "colorlinks=true" "nofonts" "nobib")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperref")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
-    "article"
-    "art10"
+    "tufte-book"
+    "tufte-book10"
     "fontspec"
     "xunicode"
     "xltxtra"
+    "ifxetex"
+    "booktabs"
     "etoolbox"
     "geometry"
     "graphicx"
-    "hyperref"
-    "fancyhdr")
+    "hyperref")
+   (TeX-add-symbols
+    '("textls" ["argument"] 1))
    (LaTeX-add-labels
     "sec:subtitle"
     "sec:frame-attributes"

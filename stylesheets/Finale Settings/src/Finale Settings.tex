@@ -1,16 +1,26 @@
 % !TEX TS-program = latex
 % !TEX encoding = UTF-8
 
-% This is a simple template for a XeLaTeX document using the "article" class,
-% with the fontspec package to easily select fonts.
-
-\documentclass[10pt,twoside]{article} % use larger type; default would be 10pt
+\documentclass[unicode,hyperfootnotes=false,xetex,colorlinks=true,nofonts,nobib]{tufte-book} % use larger type; default would be 10pt
 
 \usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
 \defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
 \usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
 \usepackage{xltxtra} % Extra customizations for XeLaTeX
 
+\usepackage{ifxetex}
+\usepackage{booktabs}
+
+\ifxetex
+  \newcommand{\textls}[2][5]{%
+    \begingroup\addfontfeatures{LetterSpace=#1}#2\endgroup
+  }
+  \renewcommand{\allcapsspacing}[1]{\textls[15]{#1}}
+  \renewcommand{\smallcapsspacing}[1]{\textls[10]{#1}}
+  \renewcommand{\allcaps}[1]{\textls[15]{\MakeTextUppercase{#1}}}
+  \renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeTextLowercase{#1}}}
+  \renewcommand{\textsc}[1]{\smallcapsspacing{\textsmallcaps{#1}}}
+\fi
 
 % \usepackage{sectsty}
 % \allsectionsfont{\sffamily}
@@ -19,7 +29,7 @@
 \setsansfont[]{Nimbus Sans L}
 % \setmonofont{Deja Vu Mono}
 \usepackage{etoolbox}
-\AtBeginEnvironment{tabular}{\setmainfont[Numbers={Monospaced}]{Latin Modern Roman}}
+\AtBeginEnvironment{tabular}{\setmainfont[Numbers={Monospaced}]{Libertinus Serif}}
 
 
 % other LaTeX packages.....
@@ -38,17 +48,17 @@
     urlcolor=black
 }
 
-\usepackage{fancyhdr}
+% \usepackage{fancyhdr}
 
-\pagestyle{fancy}
-\fancyhf{}
-\rhead{{\footnotesize\textsf{Rachael Carlson}}}
-\lhead{{\footnotesize\textsf{Finale Settings}}}
-\rfoot{{\footnotesize\textsf{Page \thepage}}}
-\lfoot{{\footnotesize\textsf{\today}}}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \rhead{{\footnotesize\textsf{Rachael Carlson}}}
+% \lhead{{\footnotesize\textsf{Finale Settings}}}
+% \rfoot{{\footnotesize\textsf{Page \thepage}}}
+% \lfoot{{\footnotesize\textsf{\today}}}
 
-\title{\textsf{Finale Settings}}
-\author{\textsf{Rachael Carlson}}
+\title{Finale Settings}
+\author{Rachael Carlson}
 %\date{} % Activate to display a given date or no date (if empty),
          % otherwise the current date is printed 
 
@@ -73,12 +83,12 @@ Right Half Ledger Line Length: 7 EVPU\\
 Stems: 2.2 EVPU\\
 Crescendos: 4.2 EVPU
 \subsection{Ties}
-\subsubsection{Placement: Over/Inner}
+\paragraph{Placement: Over/Inner}
 \begin{tabular}{l l l}
 Horizontal: & Start: $-1$pt & End: 1\\
 Vertical: & Start: 3 & End: 3\\
 \end{tabular}
-\subsubsection{Placement: Under/Inner}
+\paragraph{Placement: Under/Inner}
 \begin{tabular}{l l l}
 Horizontal: & Start: 9.5 & End: $-9.5$\\
 Vertical: & Start $-3$ & End: $-3$
@@ -100,7 +110,7 @@ Top, Bottom: 36pt
 \emph{Note: a bug in Finale 25 on Windows 10 makes it so that you have to type in the name of the font exactly in order for the font to appear on screen. To embed the font for print you have to Print to PDF. To do so, in the print dialog, choose the Microsoft Print to PDF printer.}
 \subsection{Title}
 Font: Avenir Next Heavy, 28pt
-\subsubsection{Frame Attributes}
+\paragraph{Frame Attributes}
 Inserted preset text box (editable through score manager), page 1 only\\
 Horizontal: Center, 0pt\\
 Vertical: Top (Header), 0\\
@@ -112,7 +122,7 @@ Position from Edge of Frame: \textbf{checked}
 
 Font: Avenir Next, Regular, 8pt
 
-\subsubsection{Frame Attributes}
+\paragraph{Frame Attributes}
 \label{sec:frame-attributes}
 
 Inserted preset text box (editable through Score Manager), page 1 only\\
@@ -128,7 +138,7 @@ Font: Pitches, TeXGyreSchola, Regular, 10pt\\
 Accidentals: TeXGyreSchola, Regular, 8pt\\
 \indent Superscript: 2
 
-\subsubsection{Frame Attributes}
+\paragraph{Frame Attributes}
 \label{sec:frame-attributes-1}
 
 Text box, page 1 only\\
@@ -141,7 +151,7 @@ Position from edge of frame: \textbf{checked}
 
 Font: TeXGyreSchola, Regular, 10pt\\
 
-\subsubsection{Frame Attributes}
+\paragraph{Frame Attributes}
 \label{sec:frame-attributes-2}
 
 Inserted preset text box (editable through Score Manager), page 1 only\\
@@ -155,7 +165,7 @@ Position from edge of frame: \textbf{checked}\\
 
 Font: TGS, Regular, 8pt (This is a modified version of TeXGyreSchola with Old Style numerals)
 
-\subsubsection{Frame Attributes}
+\paragraph{Frame Attributes}
 \label{sec:frame-attributes-3}
 
 Inserted preset text box (editable through Score Manager), page 1 only\\
@@ -170,7 +180,7 @@ Justification: Center
 
 Font: TGS, Regular, 8pt
 
-\subsubsection{Frame Attributes}
+\paragraph{Frame Attributes}
 \label{sec:frame-attributes-4}
 
 Inserted preset text boxes: [Title] [File Date] [Page Number]/[Total Pages]\\
@@ -185,7 +195,7 @@ Position from edge of frame: \textbf{checked}
 
 Font: Avenir Next, Regular, 8pt
 
-\subsubsection{Frame Attributes}
+\paragraph{Frame Attributes}
 \label{sec:frame-attributes-5}
 
 Text box, Measure attached (standard notation)\\
@@ -273,7 +283,7 @@ First: 12.75pt; Second: 23.75pt; Third: 34.75; Fourth: 45.75
 When terminated in the same system as its inception, use the \emph{Bracket Tool}.\\
 When terminated in a different system than its inception, use the \emph{Line Tool} and make it horizontal.
 
-\subsubsection{Elevated Duration Line}
+\paragraph{Elevated Duration Line}
 \label{sec:elev-durat-line}
 
 Line Style: Solid; Horizontal, true\\
@@ -290,7 +300,7 @@ End Point Style for elevating duration line one level:\\
   Hook, -17pt & Hook, -3pt\\
 \end{tabular}
 
-\subsubsection{Courtesy Parenthesis}
+\paragraph{Courtesy Parenthesis}
 \label{sec:courtesy-parenthesis}
 
 Font: TeXGyreSchola, Regular, 10pt\\
@@ -303,28 +313,28 @@ Vertical Alignment Point: Staff Reference Line:\\
 \subsection{Left-Hand Fingerings (Below Staff)}
 \label{sec:left-hand-fingerings}
 
-\subsubsection{Fourth String}
+\paragraph{Fourth String}
 \label{sec:fourth-string}
 
 Justification: Center\\
 Horizontal Alignment: Stem, 2.75pt\\
 Vertical Alignment: Staff Reference Line, -17.5pt (quarter), -16.5pt (eighth)
 
-\subsubsection{Fifth String}
+\paragraph{Fifth String}
 \label{sec:fifth-string}
 
 Justification: Center\\
 Horizontal Alignment: Stem, 2.75pt\\
 Vertical Alignment: Staff Reference Line, -26.5pt (quarter), -25.5pt (eighth)
 
-\subsubsection{Sixth String}
+\paragraph{Sixth String}
 \label{sec:sixth-string}
 
 Justification: Center\\
 Horizontal Alignment: 2.75pt\\
 Vertical Alignment: Below Staff Baseline or Entry, -35 (quarter), -34 (eighth)\\
 
-\subsubsection{Additional Offsets}
+\paragraph{Additional Offsets}
 \label{sec:additional-offsets}
 
 Additional Entry Offset:\\
@@ -347,7 +357,7 @@ Vertical: Staff Reference Line\\
 
 Font: TeXGyreSchola, Regular, 8pt\\
 
-\subsubsection{Positioning: I, M, A}
+\paragraph{Positioning: I, M, A}
 \label{sec:positioning:-i-m}
 
 Justification: Center\\
@@ -365,7 +375,7 @@ Horizontal Alignment: Stem, -5; two-digit numbers -7\\
 \caption{Vertical Alignment of i, m, a}
 \end{table}
 
-\subsubsection{Positioning: P}
+\paragraph{Positioning: P}
 \label{sec:positioning:-p}
 
 Justification: Center\\
@@ -422,20 +432,20 @@ Special Tools > Note Shape Tool\\
 \subsection{Notehead Settings}
 \label{sec:notehead-settings}
 
-\subsubsection{Positioning}
+\paragraph{Positioning}
 \label{sec:positioning}
 
 Horizontal: 0\\
 Vertical: 1\\
 Allow vertical positioning: \textbf{checked}
 
-\subsubsection{Font}
+\paragraph{Font}
 \label{sec:font}
 
 Use default notehead font \textbf{unchecked}\\
 Zeal 9 plain
 
-\subsubsection{Surrounding}
+\paragraph{Surrounding}
 \label{sec:surrounding}
 
 `<' and `>' are separate expressions\\

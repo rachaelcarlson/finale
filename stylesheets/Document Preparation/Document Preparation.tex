@@ -1,0 +1,247 @@
+% !TEX TS-program = latex
+% !TEX encoding = UTF-8
+
+\documentclass[unicode,hyperfootnotes=false,xetex,colorlinks=true,nofonts,nobib]{tufte-book} % use larger type; default would be 10pt
+
+%%
+% Book metadata
+\title{Finale Document \\\noindent Preparation}
+\author{Rachael Carlson}
+\publisher{rachaelcarlson.com}
+
+%%
+% For nicely typeset tabular material
+\usepackage{booktabs}
+
+%%
+% For graphics / images
+\usepackage{graphicx}
+\setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+\graphicspath{{graphics/}}
+
+%%
+% The fancyvrb package lets us customize the formatting of verbatim
+% environments. We use a slightly smaller font
+\usepackage{fancyvrb}
+\fvset{fontsize=\normalsize}
+
+%%
+% Prints argument within hanging parentheses (i.e., parentheses that take
+% up no horizontal space).  Useful in tabular environments.
+\newcommand{\hangp}[1]{\makebox[0pt][r]{(}#1\makebox[0pt][l]{)}}
+
+%%
+% Prints an asterisk that takes up no horizontal space.
+% Useful in tabular environments.
+\newcommand{\hangstar}{\makebox[0pt][l]{*}}
+
+%%
+% Prints a trailing space in a smart way.
+\usepackage{xspace}
+
+% Prints the month name (e.g., January) and the year (e.g., 2008)
+\newcommand{\monthyear}{%
+  \ifcase\month\or January\or February\or March\or April\or May\or June\or
+  July\or August\or September\or October\or November\or
+  December\fi\space\number\year
+}
+
+
+% Prints an epigraph and speaker in sans serif, all-caps type.
+\newcommand{\openepigraph}[2]{%
+  %\sffamily\fontsize{14}{16}\selectfont
+  \begin{fullwidth}
+  \sffamily\large
+  \begin{doublespace}
+  \noindent\allcaps{#1}\\% epigraph
+  \allcaps{#2}% author
+  \end{doublespace}
+  \end{fullwidth}
+}
+
+% Inserts a blank page
+\newcommand{\blankpage}{\newpage\hbox{}\thispagestyle{empty}\newpage}
+
+\usepackage{units}
+
+% Typesets the font size, leading, and measure in the form of 10/12x26 pc.
+\newcommand{\measure}[3]{#1/#2$\times$\unit[#3]{pc}}
+
+%%
+% Font configurations
+\usepackage{fontspec} % Font selection for XeLaTeX; see fontspec.pdf for documentation
+\defaultfontfeatures{Mapping=tex-text} % to support TeX conventions like ``---''
+\usepackage{xunicode} % Unicode support for LaTeX character names (accents, European chars, etc)
+\usepackage{xltxtra} % Extra customizations for XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \newcommand{\textls}[2][5]{%
+    \begingroup\addfontfeatures{LetterSpace=#1}#2\endgroup
+  }
+  \renewcommand{\allcapsspacing}[1]{\textls[15]{#1}}
+  \renewcommand{\smallcapsspacing}[1]{\textls[10]{#1}}
+  \renewcommand{\allcaps}[1]{\textls[15]{\MakeTextUppercase{#1}}}
+  \renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeTextLowercase{#1}}}
+  \renewcommand{\textsc}[1]{\smallcapsspacing{\textsmallcaps{#1}}}
+\fi
+\setmainfont[Numbers=OldStyle]{ETBembo}
+\setsansfont[]{Gill Sans Nova}
+\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
+\usepackage{etoolbox}
+
+%%
+% Use monospaced numbers within the tabular environment
+\AtBeginEnvironment{tabular}{\setmainfont[Numbers={Monospaced}]{Libertinus Serif}}
+
+% other LaTeX packages.....
+\usepackage{geometry} % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}
+
+% \usepackage{hyperref}
+% \hypersetup{
+%     colorlinks,
+%     citecolor=black,
+%     filecolor=black,
+%     linkcolor=red,
+%     urlcolor=black
+% }
+
+% Generates the index
+\usepackage{makeidx}
+\makeindex
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter{Steps to Produce a New Document}
+\label{sec:steps-produce-new}
+
+Before beginning a new Finale document one must ensure that all
+elements of the composition are known. These elements include but are
+not limited to its form, key signature, time signatures, desired staff
+for standard notation, etc. Knowing these elements will ensure that
+the preparation of the new document will keep bugs away later
+on. Changing these elements after having started the document can
+introduce bugs which will either greatly hinder the development of the
+document or make it impossible to continue.
+
+\section{Initial Steps}
+\label{sec:initial-steps}
+
+
+\begin{enumerate}
+\item New Document
+\item Default Document
+\item Change Margins
+  \begin{itemize}
+  \item Settings for MacOS Finale
+    \begin{enumerate}
+    \item Page Layout Tool
+    \item Page Layout $\rightarrow$ Page Margins $\rightarrow$ Edit
+      Page Margins...
+    \item Top, Bottom: 36pt
+    \item Left, Right: 54pt
+    \item Change: All Pages
+    \item Apply to Parts/Score
+      \begin{itemize}
+      \item Select Score and Parts
+      \end{itemize}
+    \end{enumerate}
+  \end{itemize}
+  \begin{itemize}
+  \item Settings for Windows 10 Finale
+    \begin{enumerate}
+    \item Document $\rightarrow$ Page Format $\rightarrow$ Score
+    \item Page Margins
+    \item Top, Bottom: 36pt
+    \item Left, Right: 54pt
+    \end{enumerate}
+  \end{itemize}
+\item Delete existing measures
+  \begin{itemize}
+  \item This is necessary in Windows 10 Finale and not necessary in
+    MacOS Finale
+  \end{itemize}
+\item Edit Score Manager Settings
+\end{enumerate}
+
+\section{Score Manager}
+\label{sec:score-manager}
+
+\textbf{Window $\rightarrow$ Score Manager}
+
+\begin{itemize}
+\item Instrument List
+  \begin{enumerate}
+  \item Standard Notation
+    \begin{enumerate}
+    \item Change clef for blank staff to desired clef
+    \item Add additional standard notation clefs as needed and change
+      clef
+    \end{enumerate}
+  \item Tablature
+    \begin{enumerate}
+    \item Add Instrument $\rightarrow$ Tablature $\rightarrow$ Guitar [TAB with Stems]
+    \item Change clef to serif `TAB'
+    \item Notation Style $\rightarrow$ Tablature $\rightarrow$ Settings
+      \begin{enumerate}
+      \item Change the tuning
+        \begin{enumerate}
+        \item Edit Instruments
+        \item Change pitches of each string to document tuning
+          \begin{itemize}
+          \item These will be \textsc{midi} note pitches
+          \item C\textsubscript{4} = 60
+          \end{itemize}
+        \end{enumerate}
+      \item Default Lowest Fret = 0
+      \item Capo Position = 0
+      \item Options
+        \begin{enumerate}
+        \item Show Tuplets \textbf{checked}
+        \item Show Clef Only On First Measure \textbf{unchecked}
+        \end{enumerate}
+      \item Fret Numbers
+        \begin{enumerate}
+        \item Vertical Offset = -4
+        \item Appearance
+          \begin{itemize}
+          \item Use Letters \textbf{unchecked}
+          \item Break Tablature Lines at Numbers \textbf{checked}
+          \end{itemize}
+        \end{enumerate}
+      \end{enumerate}
+    \end{enumerate}
+  \end{enumerate}
+\item File Info
+  \begin{enumerate}
+  \item Add all pertinent information in each of the respective sections 
+  \end{enumerate}
+\end{itemize}
+
+\chapter{Measures}
+\label{sec:measures}
+
+\begin{enumerate}
+\item Edit $\rightarrow$ Add Measures
+\item Add the total number of measures for the document
+  \begin{itemize}
+  \item If the document has multiple movements add the total number for all movements
+  \end{itemize}
+\end{enumerate}
+
+\chapter{Time and Key Signatures}
+\label{sec:time-key-signatures}
+
+\begin{enumerate}
+\item Change the time signature for the document
+  \begin{itemize}
+  \item If the document has multiple changes in time signature, add all of these changes in the appropriate measures
+  \end{itemize}
+\end{enumerate}
+\end{document}  
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

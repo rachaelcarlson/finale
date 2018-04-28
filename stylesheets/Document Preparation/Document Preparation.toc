@@ -1,0 +1,6 @@
+\contentsline {chapter}{Steps to Produce a New Document}{5}{chapter*.2}
+\contentsline {section}{Initial Steps}{5}{section*.3}
+\contentsline {section}{Score Manager}{6}{section*.4}
+\contentsline {chapter}{Measures}{7}{chapter*.5}
+\contentsline {chapter}{Time and Key Signatures}{9}{chapter*.6}
+\contentsfinish 

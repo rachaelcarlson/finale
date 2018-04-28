@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.4.26)  28 APR 2018 16:33
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016/Debian) (preloaded format=xelatex 2018.4.26)  28 APR 2018 16:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1144,6 +1144,13 @@ LaTeX Info: Redefining \selectfont on input line 112.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \langwohyphens=\language83
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 147.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 147.
+[1
+
+]
 .................................................
 . fontspec info: "defining-font"
 . 
@@ -1174,28 +1181,22 @@ ext;"
 . Serif/BI/OT:script=latn;language=DFLT;letterspace=10;+onum;+smcp;mapping=tex-
 text;"
 .................................................
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 140.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 140.
-[1
-
-] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 242.
+ [2]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
  [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 242.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
  (./Document Preparation.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 242.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 242.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 242.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 249.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 249.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 249.
  ) 
 Here is how much of TeX's memory you used:
- 24393 strings out of 493068
- 458958 string characters out of 6137720
- 501602 words of memory out of 5000000
- 28052 multiletter control sequences out of 15000+600000
- 4553 words of font info for 46 fonts, out of 8000000 for 9000
+ 24395 strings out of 493068
+ 459063 string characters out of 6137720
+ 501727 words of memory out of 5000000
+ 28053 multiletter control sequences out of 15000+600000
+ 4561 words of font info for 47 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 51i,11n,117p,10424b,530s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 51i,11n,117p,10424b,659s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Document Preparation.pdf (3 pages).

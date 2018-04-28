@@ -55,4 +55,5 @@
 \contentsline {paragraph}{Positioning}{33}{paragraph*.57}
 \contentsline {paragraph}{Font}{33}{paragraph*.58}
 \contentsline {paragraph}{Surrounding}{33}{paragraph*.59}
+\contentsline {chapter}{Index}{35}{chapter*.60}
 \contentsfinish 

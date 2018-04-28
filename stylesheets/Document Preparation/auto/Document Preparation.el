@@ -2,7 +2,7 @@
  "Document Preparation"
  (lambda ()
    (TeX-add-to-alist 'LaTeX-provided-class-options
-                     '(("tufte-book" "unicode" "hyperfootnotes=false" "xetex" "colorlinks=true" "nofonts" "nobib")))
+                     '(("tufte-handout" "unicode" "hyperfootnotes=false" "xetex" "colorlinks=true" "nofonts" "nobib")))
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
@@ -12,8 +12,8 @@
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
-    "tufte-book"
-    "tufte-book10"
+    "tufte-handout"
+    "tufte-handout10"
     "booktabs"
     "graphicx"
     "fancyvrb"

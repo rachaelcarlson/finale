@@ -1,7 +1,5 @@
 # Finale #
 
--------------------------------------------------------------------------------
-
 Files related to Finale music documents
 
 ## About ##
@@ -33,4 +31,5 @@ would start with how to set up a finger-style guitar Finale document.
 - [ ] Update circled numbers in stylesheet
 - [ ] Discuss future thoughts and ideas for stylesheets, ie. margins,
       font ratios, etc.
-- [ ] Evaluate the possiblities of
+- [ ] Evaluate the possiblities of merging ``Document Preparation``
+      and ``Finale Settings``

@@ -29,7 +29,8 @@ would start with how to set up a finger-style guitar Finale document.
 
 # TODO #
 
-[ ] Update fonts and font sizes in stylesheet
-[ ] Update circled numbers in stylesheet
-[ ] Discuss future thoughts and ideas for stylesheets, ie. margins, font ratios, etc.
-[ ] Evaluate the possiblities of 
+- [ ] Update fonts and font sizes in stylesheet
+- [ ] Update circled numbers in stylesheet
+- [ ] Discuss future thoughts and ideas for stylesheets, ie. margins,
+      font ratios, etc.
+- [ ] Evaluate the possiblities of

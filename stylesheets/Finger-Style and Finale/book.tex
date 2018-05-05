@@ -84,9 +84,9 @@
   \renewcommand{\smallcaps}[1]{\smallcapsspacing{\scshape\MakeTextLowercase{#1}}}
   \renewcommand{\textsc}[1]{\smallcapsspacing{\textsmallcaps{#1}}}
 \fi
-\setmainfont[Numbers=OldStyle]{Libertinus Serif}
-\setsansfont[]{TeX Gyre Heros}
-\setmonofont[Scale=MatchLowercase]{Libertinus Mono}
+\setmainfont[Numbers=OldStyle]{Adobe Garamond Pro}
+\setsansfont[]{Acumin Pro}
+\setmonofont[Scale=MatchLowercase]{Menlo}
 
 \setsidenotefont{\sffamily\scriptsize}
 \setmarginnotefont{\sffamily\scriptsize}
@@ -232,42 +232,79 @@ document or make it impossible to continue.
 \subsection{Initial Steps}
 \label{sec:initial-steps}
 
+The first several steps for creating a new document can seem
+tedious. At this point it seems that there is a possibility to create
+a template for each desired document layout. After creating a new
+document from a template one would then load a Finale Library in order
+to ensure consistency across multiple documents.
 
-\begin{enumerate}
-\item New Document
-\item Default Document
-\item Change Margins
-  \begin{itemize}
-  \item Settings for MacOS Finale
-    \begin{enumerate}
-    \item Page Layout Tool
-    \item Page Layout $\rightarrow$ Page Margins $\rightarrow$ Edit
-      Page Margins...
-    \item Top, Bottom: 36pt
-    \item Left, Right: 54pt
-    \item Change: All Pages
-    \item Apply to Parts/Score
-      \begin{itemize}
-      \item Select Score and Parts
-      \end{itemize}
-    \end{enumerate}
-  \end{itemize}
-  \begin{itemize}
-  \item Settings for Windows 10 Finale
-    \begin{enumerate}
-    \item Document $\rightarrow$ Page Format $\rightarrow$ Score
-    \item Page Margins
-    \item Top, Bottom: 36pt
-    \item Left, Right: 54pt
-    \end{enumerate}
-  \end{itemize}
-\item Delete existing measures
-  \begin{itemize}
-  \item This is necessary in Windows 10 Finale and not necessary in
-    MacOS Finale
-  \end{itemize}
-\item Edit Score Manager Settings
-\end{enumerate}
+\newthought{Begin by starting} a \emph{New Document}. This \emph{New Document} will
+be a \emph{Default Document} as opposed to a document created through
+the \emph{Setup Wizard}. This new document will be have around 32
+measures of a treble clef with a time signature of 4/4 and a key
+signature of C major. In the Windows 10 version of Finale these will
+need to be deleted in order for the page margins to properly update.
+
+\newthought{Next, change the margins}. Changing the margins of the document at this
+early stage will help to ensure that the number of measures per system
+will be appropriate. Changing the number of measures per system after
+annotations such as left-hand duration have been started can result in
+hours of more work to correct such a small oversight.
+
+In Finale for MacOS select the \emph{Page Layout Tool}. From the menu
+bar, open the \emph{Page Layout Tool}, go to \emph{Page Margins} and
+\emph{Edit Page Margins}. For the top and bottom of the page, we will
+use 36pt. For the left and right of the page, we will use 54pt. Ensure
+that All Pages is selected within the Change parameter. Select Apply
+to Parts/Score and select Score and Parts.
+
+In Windows 10 there is a bug which seems to make it impossible to
+change the page margins in the same manner explained
+above.\footnote{Bug noted as of April, 2018.} The workaround is to go
+to \emph{Document} in the menu. Within this menu go to \emph{Page
+  Format} then \emph{score}. Under the Page Margins section select
+36pt for Top and Bottom and 54pt for Left and Right. Perhaps a related
+bug requires several more steps in order to update the page layout. Go
+to Page Layout. Click on the \emph{Update Page Layout Tool}. Then
+delete the existing default measures. This should update the page
+layout.
+
+% \begin{enumerate}
+% \item New Document
+% \item Default Document
+% \item Change Margins
+%   \begin{itemize}
+%   \item Settings for MacOS Finale
+%     \begin{enumerate}
+%     \item Page Layout Tool
+%     \item Page Layout $\rightarrow$ Page Margins $\rightarrow$ Edit
+%       Page Margins...
+%     \item Top, Bottom: 36pt
+%     \item Left, Right: 54pt
+%     \item Change: All Pages
+%     \item Apply to Parts/Score
+%       \begin{itemize}
+%       \item Select Score and Parts
+%       \end{itemize}
+%     \end{enumerate}
+%   \end{itemize}
+%   \begin{itemize}
+%   \item Settings for Windows 10 Finale
+%     \begin{enumerate}
+%     \item Document $\rightarrow$ Page Format $\rightarrow$ Score
+%     \item Page Margins
+%     \item Top, Bottom: 36pt
+%     \item Left, Right: 54pt
+%     \end{enumerate}
+%   \end{itemize}
+% \item Delete existing measures
+%   \begin{itemize}
+%   \item This is necessary in Windows 10 Finale and not necessary in
+%     MacOS Finale
+%   \end{itemize}
+% \item Edit Score Manager Settings
+% \end{enumerate}
+
 
 \subsection{Score Manager}
 \label{sec:score-manager}
